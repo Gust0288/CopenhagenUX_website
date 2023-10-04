@@ -2,15 +2,64 @@
 
 ---
 
-
 <nav>
-    <div></div>
-    <div></div>
+  <div class="nav1">
+    <img id="logo" src="/Logo.svg" alt="Logo" />
+  </div>
+  <div class="nav2">
+    <a id="program" href="">Program</a>
+    <a href="">
+      <img id="tickets" src="/ticketsButton.svg" alt="" />
+    </a>
+    <img id="burger" src="/burger-menu.svg" alt="" />
+  </div>
 </nav>
 
-
 <style>
-    nav{
-        border: solid black 5px;
-    }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid black 1.5px;
+    height: 75px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  #logo {
+    width: 300px;
+    height: 100%;
+    margin-left: 10px;
+  }
+  #burger {
+    width: 50px;
+    height: 100%;
+  }
+  #burger:hover {
+    cursor: pointer;
+  }
+  #tickets {
+    width: 135px;
+    height: 100%;
+  }
+  #program {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: solid black 2px;
+    border-left: none;
+    border-right: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .nav1 {
+  }
+  .nav2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 2em;
+  }
 </style>
