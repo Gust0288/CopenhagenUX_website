@@ -1,0 +1,32 @@
+---
+const { text, headliner, pathImg } = Astro.props;
+---
+
+<article class="mainArticle">
+  <img src={pathImg} alt="" />
+  <h3>{headliner}</h3>
+  <p>{text}</p>
+</article>
+
+<style>
+  .mainArticle {
+    background-image: url("/svg/textBox.svg");
+    width: 600px;
+    height: 330px;
+  }
+  p {
+    color: white;
+    margin-left: 50px;
+    margin-top: 17px;
+    padding-right: 50px;
+  }
+  h3 {
+    color: white;
+    margin-left: 50px;
+    margin-top: 29px;
+  }
+  img{
+    margin-left: 12px;
+    margin-top: 13px;
+  }
+</style>
