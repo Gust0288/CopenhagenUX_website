@@ -1,0 +1,12 @@
+<svg width="214" height="216" viewBox="0 0 214 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="twitterIcon">
+<path id="Ellipse 4" d="M211.5 108C211.5 166.288 164.692 213.5 107 213.5C49.3081 213.5 2.5 166.288 2.5 108C2.5 49.712 49.3081 2.5 107 2.5C164.692 2.5 211.5 49.712 211.5 108Z" stroke="#CBD2E0" stroke-width="5"/>
+<g id="Subtract">
+<path d="M108.29 98.358L145 56H159L115.051 106.71L108.29 98.358Z" fill="#F7F9FC"/>
+<path d="M97.9489 110.29L54 161H68L104.71 118.642L97.9489 110.29Z" fill="#F7F9FC"/>
+<path d="M108.29 98.358L145 56H159L115.051 106.71L108.29 98.358Z" stroke="#F7F9FC"/>
+<path d="M97.9489 110.29L54 161H68L104.71 118.642L97.9489 110.29Z" stroke="#F7F9FC"/>
+</g>
+<path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M54 56H74L159 161H139L54 56ZM66 65H76L147 152H137L66 65Z" fill="#F7F9FC"/>
+</g>
+</svg>
