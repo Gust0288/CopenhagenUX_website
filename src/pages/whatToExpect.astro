@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TextCards from "../components/TextCards.astro";
+---
+
+<Layout>
+  <main>
+    <TextCards
+      text="Welcome to the UX Copenhagen conference – Denmark’s most inspirational human experience conference, covering subjects like user experience, content, strategy, and research under a new theme for each year. We will present you with two days filled with superb content from 20+ local and international speakers, hands-on workshops, inspiration, networking, new knowledge, and new insights."
+      headliner="What is UX Copenhagen?"
+    />
+    <TextCards pathImg="https://picsum.photos/id/14/560/287.webp" />
+    <TextCards pathImg="https://picsum.photos/id/14/560/287.webp" />
+    <TextCards
+      text="The theme for UX Copenhagen 2024 is: Degrowth and Consumerism. Angelos Arnis, the closing keynote for UX Copenhagen 2023 stated very bluntly “There is no planet B”. For far too long, we have been living in a world that applauds and encourages continuous growth, expansion, selling, and manipulation. It’s a world of over production and over consumption, but we’re running out of resources. Business as usual will not cut it anymore. On March 20-21, 2024, we’ll be discussing climate change, consumerism, and waste. We’ll talk about degrowth, and about unlearning decades of harmful production, development and processes. We’ll have talks about how consumerism will need to change in order for the planet to survive."
+      headliner="The theme for UX Copenhagen 2024"
+    />
+    <TextCards text="UX Copenhagen is, and shall remain, a safe place for different voices to be heard. Please find our COC here: https://uxcopenhagen.com/code-of-conduct/" headliner="Code of Conduct"/>
+    <TextCards pathImg="https://picsum.photos/id/14/560/287.webp" />
+  </main>
+</Layout>
+<style>
+  main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5em;
+    margin-left: 115px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+
+  }
+</style>
