@@ -2,15 +2,199 @@
 
 ---
 
-
-<nav>
-    <div></div>
-    <div></div>
+<nav class="main">
+  <div class="nav1">
+    <img id="logo" src="/Logo.svg" alt="Logo" />
+  </div>
+  <div class="nav2">
+    <a id="program" href="">Program</a>
+    <a href="">
+      <img id="tickets" src="/ticketsButton.svg" alt="" />
+    </a>
+    <img id="burger" src="/burger-menu.svg" alt="" />
+  </div>
+</nav>
+<nav class="side-menu">
+  <div>
+    <ul>
+      <li><a href="#">Program</a></li>
+      <li><a href="/about">What to expect</a></li>
+      <li><a href="#">Previous conference</a></li>
+      <li><a href="#">About</a></li>
+      <!-- <p>&times;</p> -->
+    </ul>
+  </div>
+  <div class="buttonBurger">
+    <a href=""><img id="tickets2" src="/ticketsButton.svg" alt="" /></a>
+    <div class="newsletterBut">
+      <a href=""><img id="signUp" src="/signup.svg" alt="" /></a>
+      <p id="newsP">Sign up for our newsletter</p>
+    </div>
+  </div>
+  <div class="footer">
+    <a href=""><p>Code of Conduct</p></a>
+    <a href=""><p>Privacy Policy</p></a>
+    <a href=""><p>FAQ</p></a>
+  </div>
 </nav>
 
-
 <style>
-    nav{
-        border: solid black 5px;
-    }
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid black 1.5px;
+    height: 75px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  #logo {
+    width: 300px;
+    height: 100%;
+    margin-left: 10px;
+  }
+  #burger {
+    width: 50px;
+    height: 100%;
+  }
+  #burger:hover {
+    cursor: pointer;
+  }
+  #tickets {
+    width: 135px;
+    height: 100%;
+  }
+  #tickets2 {
+    width: 100px;
+    height: 100%;
+  }
+  #signUp {
+    width: 100px;
+    height: 100%;
+  }
+  #newsP {
+    margin-top: -5px;
+    font-size: 11px;
+  }
+  .footer {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+    gap: 2em;
+    margin-top: 50px;
+  }
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+  #program {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: solid black 2px;
+    border-left: none;
+    border-right: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .newsletterBut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .nav1 {
+  }
+  .nav2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 2em;
+  }
+  .buttonBurger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 200px;
+    position: fixed;
+    top: 76.5px;
+    right: -200px;
+    background-color: white;
+    overflow-x: hidden;
+    border: solid black 1.5px;
+    border-right: none;
+    border-top: none;
+    transition: 0.5s;
+    /* transform: scale(0); */
+
+  }
+
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .side-menu ul li {
+    padding: 15px;
+  }
+
+  .side-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    border: solid black 2px;
+    border-left: none;
+    border-right: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .side-menu ul li a:hover {
+    color: #d8d5d5;
+  }
+  .open {
+    /* width: 200px; */
+    /* transform: scale(1); */
+    transform: translateX(-200px);
+  }
 </style>
+<script>
+  document.querySelector("#burger").addEventListener("click", clickAppear);
+  const SM = document.querySelector(".side-menu");
+
+  function clickAppear(e) {
+    e.stopPropagation();
+    SM.classList.toggle("open");
+    console.log("ÅBN");
+    document.querySelector("body").addEventListener("click", clickDisappear);
+  }
+
+  function clickDisappear(e) {
+    console.log("LUK");
+
+    if (SM.classList.contains("open")) {
+      console.log("HAR CLASS OPEN");
+      SM.classList.remove("open");
+      // SM.classList.add("");
+      document
+        .querySelector("body")
+        .removeEventListener("click", clickDisappear);
+    }
+  }
+</script>
