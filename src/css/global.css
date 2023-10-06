@@ -47,4 +47,9 @@ h4{
 
 p{
     font-size: 25px;
+    max-width: 48ch;
+}
+
+main{
+    max-width: 1600px;
 }
