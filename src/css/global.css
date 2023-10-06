@@ -1,0 +1,46 @@
+@font-face {
+    font-family: kollektif;
+    src: url(fonts/Kollektif.ttf);
+}
+
+@font-face{
+    font-family: interReg;
+    src: url(fonts/Inter-Regular.ttf);
+}
+
+@font-face{
+    font-family: interBold;
+    src: url(fonts/Inter-Bold.ttf);
+}
+
+h1, h2, h3{
+    font-family: kollektif;
+}
+
+h4{
+    font-family: interReg;
+}
+
+p{
+    font-family: interReg;
+}
+
+h1{
+    font-size: 80px;
+}
+
+h2{
+    font-size: 75px;
+}
+
+h3{
+    font-size: 50px;
+}
+
+h4{
+    font-size: 35px;
+}
+
+p{
+    font-size: 25px;
+}
