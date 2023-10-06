@@ -1,0 +1,75 @@
+---
+const {hideHeader, title, color2} = Astro.props;
+---
+
+<section>
+    <div id="h2Container" class={hideHeader}>
+        <h2>Upcoming 2024</h2>
+    </div>
+    <div id="cards" class={color2}>
+        <h3>{title}</h3>
+        <div id="cardContainer">
+            <slot />
+        </div>
+    </div>
+</section>
+
+<style>
+
+#h2Container{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background: linear-gradient(rgba(78, 135, 160, 0.0) 0%, rgba(78, 135, 160, 0.0) 33%, rgba(78, 135, 160, 0.4) 33.00001%, rgba(78, 135, 160, 0.4) 66%, rgba(78, 135, 160, 0.6) 66.00001%, rgba(78, 135, 160, 0.6) 100%)
+}
+
+h2{
+    grid-column: 2/3;
+    text-align: center;
+    font-size: 80px;
+    background-color: rgb(102, 214, 184);
+    padding: 1rem;
+    margin: 0;
+   color: white;
+}
+
+#cards{
+    background-color: rgba(78, 135, 160, 0.6);
+}
+
+h3{
+   text-align: center;
+   padding: 3rem;
+   font-size: 77px;
+   margin: 0;
+}
+
+#cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+}
+
+
+.card1, .card2, .card3{
+    width: 300px;
+    height: 500px;
+}
+
+.color2{
+    background-color: rgba(78, 135, 160, 0.4) !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+
+</style>
+
+
+<!-- <CardShelf title="Exhibitors" hideHeader="hide" color2="color2">
+      <Card CardImgSrc="https://www.shutterstock.com/shutterstock/photos/2291150023/display_1500/stock-photo-portrait-of-a-confident-mature-businessman-with-bald-head-senior-professional-man-wearing-suit-and-2291150023.jpg" SpeakerName="Søren Sørensen" SpeakerProfession="Søren konsulant" SpeakerTopics="Sørens skaldede isse"/>
+      <Card CardImgSrc="https://www.shutterstock.com/shutterstock/photos/2291150023/display_1500/stock-photo-portrait-of-a-confident-mature-businessman-with-bald-head-senior-professional-man-wearing-suit-and-2291150023.jpg" SpeakerName="Søren Sørensen" SpeakerProfession="Søren konsulant" SpeakerTopics="Sørens skaldede isse"/>
+      <Card CardImgSrc="https://www.shutterstock.com/shutterstock/photos/2291150023/display_1500/stock-photo-portrait-of-a-confident-mature-businessman-with-bald-head-senior-professional-man-wearing-suit-and-2291150023.jpg" SpeakerName="Søren Sørensen" SpeakerProfession="Søren konsulant" SpeakerTopics="Sørens skaldede isse"/>
+   </CardShelf> -->
