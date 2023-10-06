@@ -1,48 +1,93 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ScheduleCard from "../components/ScheduleCard.astro";
+import CardShelf from "../components/CardShelf.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
   <main>
-    <div class="topDate">
+    <h1 id="titel">Program</h1>
+
+    <section class="speakerBack">
+      <h2>Speakers 2024</h2>
+      <div class="speakers">
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <div class="imageContainer">
+        <img id="arrow" src="/svg/Expand-Arrow.svg" alt="" />
+      </div>
+      <div class="expand-speakers">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </section>
+
+    <section class="exhibitor">
+      <h2>Exhibitors 2024</h2>
+      <div class="speakers">
+        <Card />
+        <Card />
+        <Card />
+      </div>
+      <div class="imageContainer">
+        <img id="arrow1" src="/svg/Expand-Arrow.svg" alt="" />
+      </div>
+      <div class="expand-Ex">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </section>
+    <section class="schedule">
+      <div class="topDate">
         <h3>March 20-21</h3>
         <h3>2024</h3>
-    </div>
-    <ScheduleCard
-      date="March 20"
-      time="8 am"
-      stage="stage 1"
-      img="/img/tidsplan-02.webp"
-      name="Angelina Dowhat"
-      company="Google"
-      country="United States of America"
-      titel="What if? Summit"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    />
-    <ScheduleCard
-      date="March 20"
-      time="10 am"
-      stage="stage 1"
-      img="/img/tidsplan-01.webp"
-      name="Angelina Dowhat"
-      company="Appel"
-      country="England"
-      titel="What if Summit"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    />
-    <ScheduleCard
-      date="March 20"
-      time="12 am"
-      stage="stage 1"
-      img="/img/tidsplan-02.webp"
-      name="Angelina Dowhat"
-      company="Novo Nordisk"
-      country="Denmark"
-      titel="What if Summit"
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      variantBorder="borderBottom"
-    />
+      </div>
+      <ScheduleCard
+        date="March 20"
+        time="8 am"
+        stage="stage 1"
+        img="/img/tidsplan-02.webp"
+        name="Angelina Dowhat"
+        company="Google"
+        country="United States of America"
+        titel="What if? Summit"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      />
+      <ScheduleCard
+        date="March 20"
+        time="10 am"
+        stage="stage 1"
+        img="/img/tidsplan-01.webp"
+        name="Angelina Dowhat"
+        company="Appel"
+        country="England"
+        titel="What if Summit"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      />
+      <ScheduleCard
+        date="March 20"
+        time="12 am"
+        stage="stage 1"
+        img="/img/tidsplan-02.webp"
+        name="Angelina Dowhat"
+        company="Novo Nordisk"
+        country="Denmark"
+        titel="What if Summit"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        variantBorder="borderBottom"
+      />
+    </section>
   </main>
 </Layout>
 
@@ -50,16 +95,109 @@ import ScheduleCard from "../components/ScheduleCard.astro";
   main {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  #titel,
+  h2 {
+    text-align: center;
+  }
+  .exhibitor {
+    background-color: rgba(78, 135, 160, 0.4);
+  }
+  .speakerBack {
+    background-color: #4e87a0;
+  }
+  #arrow {
+    max-width: 25px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.5s ease;
+    filter: brightness(110%);
+  }
+  #arrow1 {
+    max-width: 25px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.5s ease;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .expand-speakers {
+    display: none;
+    grid-template-columns: repeat(3, 1fr); /* Three columns in each row */
+    grid-gap: 10px; /* Adjust the gap between items */
+    max-width: 0px;
+    margin: 0 auto; /* Center the grid container horizontally */
+    justify-content: center; /* Center the content horizontally within the grid */
+    align-items: center; /* Center the content vertically within the grid */
+    gap: 5em;
+    /* height: 0; */
+    margin-top: 5em;
+    /* transition: 0.5s ease; */
+    margin-bottom: 5em;
+  }
+  .expand-Ex {
+    display: none;
+    grid-template-columns: repeat(3, 1fr); /* Three columns in each row */
+    grid-gap: 10px; /* Adjust the gap between items */
+    max-width: 0px;
+    margin: 0 auto; /* Center the grid container horizontally */
+    justify-content: center; /* Center the content horizontally within the grid */
+    align-items: center; /* Center the content vertically within the grid */
+    gap: 5em;
+    /* height: 0; */
+    margin-top: 5em;
+    /* transition: 0.5s ease; */
+    margin-bottom: 5em;
+  }
+  .speakers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5em;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 50px;
-    /* box-shadow: 10px 5px 5px black; */
-    box-shadow: 0 0 20px  #ccc;
+    margin-bottom: 5em;
   }
-  .topDate{
+  .schedule {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* box-shadow: 10px 5px 5px black; */
+    box-shadow: 0 0 20px #ccc;
+  }
+  .topDate {
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
     margin-right: 30px;
   }
+  .show {
+    display: grid;
+    /* height: 1200px; */
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
 </style>
+
+<script>
+  document.querySelector("#arrow").addEventListener("click", showThing);
+
+  function showThing() {
+    document.querySelector(".expand-speakers").classList.toggle("show");
+    document.querySelector("#arrow").classList.toggle("rotate");
+  }
+  document.querySelector("#arrow1").addEventListener("click", showotherThing);
+
+  function showotherThing() {
+    document.querySelector(".expand-Ex").classList.toggle("show");
+    document.querySelector("#arrow1").classList.toggle("rotate");
+  }
+</script>
