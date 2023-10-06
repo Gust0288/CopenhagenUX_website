@@ -1,0 +1,36 @@
+---
+const { date, time, stage, img, name, company, country, titel, text } =
+  Astro.props;
+---
+
+<article>
+  <div class="dato">
+    <h4>{date}</h4>
+    <p>{time}</p>
+    <p>{stage}</p>
+  </div>
+  <div class="billede">
+    <img src={img} alt="" />
+    <h5>{name}</h5>
+    <p>{company}</p>
+    <p>{country}</p>
+  </div>
+  <div class="textFelt">
+    <h4>{titel}</h4>
+    <p>{text}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    border: solid black 2px;
+    border-left: none;
+    border-right: none;
+  }
+  .dato, .textFelt{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+</style>
