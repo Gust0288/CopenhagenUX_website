@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ScheduleCard from "../components/ScheduleCard.astro";
+---
+
+<Layout>
+  <main>
+    <div class="topDate">
+        <h3>March 20-21</h3>
+        <h3>2024</h3>
+    </div>
+    <ScheduleCard
+      date="March 20"
+      time="8 am"
+      stage="stage 1"
+      img="/img/tidsplan-02.webp"
+      name="Angelina Dowhat"
+      company="Google"
+      country="United States of America"
+      titel="What if? Summit"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    />
+    <ScheduleCard
+      date="March 20"
+      time="10 am"
+      stage="stage 1"
+      img="/img/tidsplan-01.webp"
+      name="Angelina Dowhat"
+      company="Appel"
+      country="England"
+      titel="What if Summit"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    />
+    <ScheduleCard
+      date="March 20"
+      time="12 am"
+      stage="stage 1"
+      img="/img/tidsplan-02.webp"
+      name="Angelina Dowhat"
+      company="Novo Nordisk"
+      country="Denmark"
+      titel="What if Summit"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      variantBorder="borderBottom"
+    />
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    /* box-shadow: 10px 5px 5px black; */
+    box-shadow: 0 0 20px  #ccc;
+  }
+  .topDate{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+</style>
