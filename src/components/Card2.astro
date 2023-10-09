@@ -1,6 +1,8 @@
 ---
+import { imageConfig } from "astro:assets";
 const { data } = Astro.props;
 // console.log(data);
+// const image = {data.image};
 ---
 
 <article>
@@ -10,8 +12,8 @@ const { data } = Astro.props;
   </div>
   <div id="textContainer">
     <div id="titleContainer">
-      <h3>{data.fullname}</h3>
-      <h4>{data.profession}</h4>
+      <h3>{data.company}</h3>
+      <h4>{data.origin}</h4>
     </div>
     <p>{data.topic}</p>
   </div>
