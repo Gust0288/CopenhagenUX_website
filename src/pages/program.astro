@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ScheduleCard from "../components/ScheduleCard.astro";
 import CardShelf from "../components/CardShelf.astro";
 import Card from "../components/Card.astro";
+import Card2 from "../components/Card2.astro";
 const data = await fetch(
   "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers?limit=3",
   {
@@ -13,8 +14,39 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
+const data2 = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers?limit=6",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
 
-// console.log(data);
+const data3 = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/booth-ex?limit=3",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
+const data4 = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/booth-ex?limit=5",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data3);
 ---
 
 <Layout>
@@ -34,32 +66,32 @@ const data = await fetch(
         <img id="arrow" src="/svg/Expand-Arrow.svg" alt="" />
       </div>
       <div class="expand-speakers">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {
+          data2.map((card) => {
+            return <Card data={card} />;
+          })
+        }
       </div>
     </section>
 
     <section class="exhibitor">
       <h2>Exhibitors 2024</h2>
       <div class="speakers">
-        <Card />
-        <Card />
-        <Card />
+        {
+          data3.map((card) => {
+            return <Card2 data={card} />;
+          })
+        }
       </div>
       <div class="imageContainer">
         <img id="arrow1" src="/svg/Expand-Arrow.svg" alt="" />
       </div>
       <div class="expand-Ex">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {
+          data4.map((card) => {
+            return <Card2 data={card} />;
+          })
+        }
       </div>
     </section>
     <section class="schedule">
