@@ -3,6 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import ScheduleCard from "../components/ScheduleCard.astro";
 import CardShelf from "../components/CardShelf.astro";
 import Card from "../components/Card.astro";
+const data = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers?limit=3",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
+
+// console.log(data);
 ---
 
 <Layout>
@@ -11,11 +23,13 @@ import Card from "../components/Card.astro";
 
     <section class="speakerBack">
       <h2>Speakers 2024</h2>
-      <div class="speakers">
-        <Card />
-        <Card />
-        <Card />
-      </div>
+      <article class="speakers">
+        {
+          data.map((card) => {
+            return <Card data={card} />;
+          })
+        }
+      </article>
       <div class="imageContainer">
         <img id="arrow" src="/svg/Expand-Arrow.svg" alt="" />
       </div>
