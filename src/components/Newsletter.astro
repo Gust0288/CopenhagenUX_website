@@ -5,6 +5,7 @@
     <div class="newsletterBox">
         <h2>Sign up for our newsletter</h2>
         <p>We send out newsletters approximately every two to four weeks, and mostly from August to March. We'd love to have you join us! <br> <br> <br> and follow us on Social Media </p>
+        <a href=""><img src="/signup.svg" alt=""></a>
 
     </div>
     <div class="socialmediaBox">
@@ -87,26 +88,31 @@ h2{
 }
 
 p{
-    font-size: 26px;
+    font-size: 28px;
     width: 38ch;
     padding: 0 0 0 70px;
+}
+
+img{
+    margin: 20px 0 0 130px;
 }
 
 .newsletterHolder{
     height: 673.4px;
     width: 900px;
+    margin: 50px auto  50px auto;
     position: relative;
-    /* background-color: rgb(87, 87, 51); */
+    /* background-color: bisque; */
 }
 
 .newsletterBox{
+
     width: 819px;
     height: 673.4px;
     clip-path: polygon(0 0, 70% 0, 100% 40%, 100% 100%, 30% 100%, 0 60%);
-    background: var(--Grbl, #4E87A0);
+    background-color: #4E87A0;
 }
 .socialmediaBox{
-    background-color: rgb(43, 30, 142);
     /* width: 894px;
     height: 438px; */
     width: 625.8px;
@@ -115,6 +121,9 @@ p{
     top: 50%;
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 0 100%);
     position: absolute;
+    background-image: url(../../public/img/Til\ newsletter-01.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
     
 }
 
@@ -182,5 +191,12 @@ p{
     fill: #dddddd;
     fill-opacity: 0.50;
 }
+
+
+@media screen and (max-width: ) {
+
+    
+}
+
 
 </style>
