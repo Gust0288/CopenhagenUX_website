@@ -1,11 +1,11 @@
 ---
-const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li2, li3, li4, li5, li6} = Astro.props;
+const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, ulDisplay, li1, li2, li3, li4, li5, li6} = Astro.props;
 ---
 
 <article class={color}>
     <div id="head">
         <div id="top">
-            <img id="logo" src="../../public/img/dandelion.png" alt="logo">
+            <img id="logo" src="/img/dandelion.png" alt="logo">
             <p class="status"></p>
             <a href="">
                 <img id="buyTickets" src="/buyTickets.svg" alt="" />
@@ -14,7 +14,7 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li
         <div id="bottom">
             <div>
                     <h2 id="ticketName">{ticketName}</h2>
-                <div>
+                <div id="birdBox">
                     <h3>{birdStatus}</h3>
                     <h4>{birdDate}</h4>
                 </div>
@@ -23,7 +23,7 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li
     </div>
     <div id="info">
         <p>{ticketInfo}</p>
-        <ul>
+        <ul class={ulDisplay}>
             <li>{li1}</li>
             <li>{li2}</li>
             <li>{li3}</li>
@@ -42,12 +42,14 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li
         padding: 1rem;
         /* height: 1400px / 2;
         width: 745px / 2; */
-        aspect-ratio: 1/1.5;
+        /* aspect-ratio: 1/1.5; */
+        width: 400px;
+        height: 600px;
         /* display: flex;
         flex-direction: column;
         justify-content: space-between; */
         display: grid;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: 220px auto auto;
     }
 
     #head{
@@ -72,6 +74,10 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li
         display: flex;
         flex-direction: column;
         justify-content: center;     
+    }
+
+    #footer h3{
+        margin: 0;
     }
 
     /* .color1{
@@ -114,6 +120,14 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li
     ul{
         padding-left: 1rem;
         margin: 0;
+    }
+
+    #birdBox h3, h4{
+        margin: 5px;
+    }
+
+    .hide{
+        display: none;
     }
 
     /* #bottom{
