@@ -1,0 +1,146 @@
+---
+const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, li1, li2, li3, li4, li5, li6} = Astro.props;
+---
+
+<article class={color}>
+    <div id="head">
+        <div id="top">
+            <img id="logo" src="../../public/img/dandelion.png" alt="logo">
+            <p class="status"></p>
+            <a href="">
+                <img id="buyTickets" src="/buyTickets.svg" alt="" />
+            </a>
+        </div>
+        <div id="bottom">
+            <div>
+                    <h2 id="ticketName">{ticketName}</h2>
+                <div>
+                    <h3>{birdStatus}</h3>
+                    <h4>{birdDate}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="info">
+        <p>{ticketInfo}</p>
+        <ul>
+            <li>{li1}</li>
+            <li>{li2}</li>
+            <li>{li3}</li>
+            <li>{li4}</li>
+            <li>{li5}</li>
+            <li>{li6}</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <h3>{ticketPrice}</h3>
+    </div>
+</article>
+
+<style>
+    article{
+        padding: 1rem;
+        /* height: 1400px / 2;
+        width: 745px / 2; */
+        aspect-ratio: 1/1.5;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+        display: grid;
+        grid-template-rows: auto auto auto;
+    }
+
+    #head{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #info{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;     
+    }
+
+    /* .color1{
+        background:linear-gradient(rgba(102, 214, 184, 1) 33%, (102, 214, 184, 0.4) 100%)
+    } */
+    .color1{
+        background-color: rgb(102, 214, 184);
+    }
+
+    .color2{
+        background:linear-gradient(rgba(79, 135, 160, 1) 33%, (79, 135, 160, 0.4) 100%)
+    }
+
+    .color3{
+        background:linear-gradient(rgba(247, 237, 29, 1) 33%, (247, 237, 29, 0.4) 100%)
+    }
+
+    .color1{
+        background:linear-gradient(rgba(212, 46, 46, 1) 33%, (212, 46, 46, 0.4) 100%)
+    }
+
+    /* hr{
+        color: rgb(23, 39, 39);
+    } */
+
+    #info, #head{
+        border-bottom: solid rgb(23, 39, 39) 1px;
+    }
+
+    #logo{
+        width: 75px;
+        height: 75px;
+    }
+
+    #buyTickets{
+        height: 60px;
+        width: auto;
+    }
+
+    ul{
+        padding-left: 1rem;
+        margin: 0;
+    }
+
+    /* #bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content:right;
+        } */
+</style>
+
+
+
+<!-- <div id="testDiv">
+   <Ticket color="color1" ticketName="On-Site, Live Event Ticket" birdStatus="Early Bird Ticket: 6500 DKK" birdDate="From 1. Sep - 15. Nov" ticketInfo="Join us live* in Copenhagen! This ticket includes:" li1="Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)" li2="Access to the Speakers’ Dinner on day 1, March 20" li3="A fun pre-conference event (1-2 hours, late afternoon) on March 19" li4="Full access to the live-stream for 3 months after the event" li5="Food and drinks during the conference (Mar 20-21)" li6="Merchandise and conference goodies" ticketPrice="Normal Price: 7500 DKK" color="color1"/>
+    
+   <Ticket color="color2" ticketName="On-Site, Live Event Ticket" birdStatus="Early Bird Ticket: 6500 DKK" birdDate="From 1. Sep - 15. Nov" ticketInfo="Join us live* in Copenhagen! This ticket includes:" li1="Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)" li2="Access to the Speakers’ Dinner on day 1, March 20" li3="A fun pre-conference event (1-2 hours, late afternoon) on March 19" li4="Full access to the live-stream for 3 months after the event" li5="Food and drinks during the conference (Mar 20-21)" li6="Merchandise and conference goodies" ticketPrice="Normal Price: 7500 DKK" color="color1"/>
+    
+   <Ticket color="color3" ticketName="On-Site, Live Event Ticket" birdStatus="Early Bird Ticket: 6500 DKK" birdDate="From 1. Sep - 15. Nov" ticketInfo="Join us live* in Copenhagen! This ticket includes:" li1="Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)" li2="Access to the Speakers’ Dinner on day 1, March 20" li3="A fun pre-conference event (1-2 hours, late afternoon) on March 19" li4="Full access to the live-stream for 3 months after the event" li5="Food and drinks during the conference (Mar 20-21)" li6="Merchandise and conference goodies" ticketPrice="Normal Price: 7500 DKK" color="color1"/>
+    
+   <Ticket color="color4" ticketName="On-Site, Live Event Ticket" birdStatus="Early Bird Ticket: 6500 DKK" birdDate="From 1. Sep - 15. Nov" ticketInfo="Join us live* in Copenhagen! This ticket includes:" li1="Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)" li2="Access to the Speakers’ Dinner on day 1, March 20" li3="A fun pre-conference event (1-2 hours, late afternoon) on March 19" li4="Full access to the live-stream for 3 months after the event" li5="Food and drinks during the conference (Mar 20-21)" li6="Merchandise and conference goodies" ticketPrice="Normal Price: 7500 DKK" color="color1"/>
+  </div>
+
+<style>
+   #testDiv{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-row: auto;
+       margin: 4rem;
+       gap: 2rem;
+   }
+</style> -->
