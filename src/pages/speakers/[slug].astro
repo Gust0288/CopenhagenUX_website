@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((speaker) => {
+    return {
+      params: { slug: speaker.slug },
+      props: { myData: speaker },
+    };
+  });
+}
+const { myData } = Astro.props;
+console.log(myData);
+---
+
+<Layout>
+  <article>
+    <img id="face" src={"/img/" + myData.image} alt="Speaker" />
+    <div>
+      <h2>{myData.fullname}</h2>
+      <h3>{myData.profession}</h3>
+      <h4>{myData.topic}</h4>
+      <p>{myData.desription}</p>
+      <a href="tickets">
+        <img id="tickets" src="/ticketsButton.svg" alt="" /></a
+      >
+    </div>
+  </article>
+</Layout>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  #face {
+    height: auto;
+    width: 100%;
+  }
+  #tickets {
+    height: auto;
+    width: 150px;
+  }
+</style>
