@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Ticket from "../components/Ticket.astro";
+---
+
+<Layout documentTitle="Tickets">
+   <main>
+        <div id="testDiv">
+            <Ticket color="color1" ticketName="On-site, live event ticket" birdStatus="Early bird ticket: 6500 DKK" birdDate="from 1. sep - 15. nov" ticketInfo="Join us live* in Copenhagen! This ticket includes:" li1="Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)" li2="Access to the Speakers Dinner on day 1, March 20" li3="A fun pre-conference event (1-2 hours, late afternoon) on March 19" li4="Full access to the live-stream for 3 months after the event" li5="ood and drinks during the conference (Mar 20-21)" li6="Merchandise and conference goodies" ticketPrice="7500 DKK"/>
+
+            <Ticket color="color2" ticketName="Live stream ticket" birdStatus="Early bird ticket: 3000 DKK" birdDate="from 1. sep - 15. nov" ticketInfo="Watch the full live-stream footage of both days of UX Copenhagen, including the talks, Q&A sessions, and at least one online workshop per day. This ticket allows you to jump in and out of the live-stream as you please, interact with others on Slack and our other social media platforms, and to access all of the recordings 60 hours after the event starts. Please note that these tickets are not refundable." ulDisplay="hide" ticketPrice="4000 DKK" />
+
+            <Ticket color="color3" ticketName="Group Ticket" birdStatus="Contact Us" ticketInfo="Please contact us for more information about group discounts!" ulDisplay="hide" />
+
+            <Ticket color="color4" ticketName="Recording of the 2023 live-stream" ulDisplay="hide" ticketPrice="2400 DKK" />
+        </div>
+   </main>
+</Layout>
+
+<style>
+      #testDiv{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: auto;
+        margin: 4rem;
+        gap: 2rem;
+    }
+
+    @media only screen and (max-width: 700px){
+        #testDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;  
+        }
+}
+</style>
+
+<!-- color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, ulDisplay, li1, li2, li3, li4, li5, li6 -->
