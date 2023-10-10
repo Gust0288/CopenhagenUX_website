@@ -176,6 +176,14 @@
     /* transform: scale(1); */
     transform: translateX(-200px);
   }
+  @media (max-width: 750px){
+    #tickets, #program{
+      display: none;
+    }
+    #logo{
+      width: 210px;
+    }
+  }
 </style>
 <script>
   document.querySelector("#burger").addEventListener("click", clickAppear);
