@@ -3,21 +3,26 @@ const { data } = Astro.props;
 // console.log(data);
 ---
 
-<article>
-  <div id="cardImgWGradient">
-    <img src={"/img/" + data.image} alt="Speaker" />
-    <div id="imgGradient"></div>
-  </div>
-  <div id="textContainer">
-    <div id="titleContainer">
-      <h3>{data.fullname}</h3>
-      <h4>{data.profession}</h4>
+<a href={`speakers/${data.slug}`}>
+  <article>
+    <div id="cardImgWGradient">
+      <img src={"/img/" + data.image} alt="Speaker" />
+      <div id="imgGradient"></div>
     </div>
-    <p>{data.topic}</p>
-  </div>
-</article>
+    <div id="textContainer">
+      <div id="titleContainer">
+        <h3>{data.fullname}</h3>
+        <h4>{data.profession}</h4>
+      </div>
+      <p>{data.topic}</p>
+    </div>
+  </article>
+</a>
 
 <style>
+  a{
+    text-decoration: none;
+  }
   article {
     width: 300px;
     height: 500px;
