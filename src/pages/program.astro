@@ -4,6 +4,8 @@ import ScheduleCard from "../components/ScheduleCard.astro";
 import CardShelf from "../components/CardShelf.astro";
 import Card from "../components/Card.astro";
 import Card2 from "../components/Card2.astro";
+// import "../css/global.css";
+
 const data = await fetch(
   "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers?limit=3",
   {
@@ -138,13 +140,30 @@ const data4 = await fetch(
 </Layout>
 
 <style>
+
+@font-face {
+    font-family: kollektif;
+    src: url(../css/fonts/Kollektif.ttf);
+}
+
+@font-face{
+    font-family: interReg;
+    src: url(../css/fonts/Inter-Regular.ttf);
+}
+
+@font-face{
+    font-family: interBold;
+    src: url(../css/fonts/Inter-Bold.ttf);
+}
+
   main {
     display: grid;
     grid-template-columns: 1fr;
   }
   #titel,
-  h2 {
+  h2,h3 {
     text-align: center;
+    font-family: kollektif;
   }
   .exhibitor {
     background-color: rgba(78, 135, 160, 0.4);
@@ -230,6 +249,13 @@ const data4 = await fetch(
   }
   .rotate {
     transform: rotate(180deg);
+  }
+
+  @media (max-width: 750px) {
+    .speakers {
+      display: flex;
+      flex-direction: column;
+    }
   }
 </style>
 
