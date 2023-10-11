@@ -33,7 +33,7 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, ulDispl
         </ul>
     </div>
     <div id="footer">
-        <h3>{ticketPrice}</h3>
+        <h2>{ticketPrice}</h2>
     </div>
 </article>
 
@@ -122,4 +122,36 @@ const {color, ticketName, birdStatus, birdDate, ticketInfo, ticketPrice, ulDispl
     .hide{
         display: none;
     }
+
+    @font-face {
+    font-family: kollektif;
+    src: url(../css/fonts/Kollektif.ttf);
+}
+
+@font-face{
+    font-family: interReg;
+    src: url(../css/fonts/Inter-Regular.ttf);
+}
+
+@font-face{
+    font-family: interBold;
+    src: url(../css/fonts/Inter-Bold.ttf);
+}
+
+h2, h3, h3, h4, h5, p{
+    color: rgb(23, 39, 39);
+}
+
+h1, h2, h3{
+    font-family: kollektif;
+}
+
+h4, h5{
+    font-family: interBold;
+}
+
+p, li{
+    font-family: interReg;
+}
+
 </style>
