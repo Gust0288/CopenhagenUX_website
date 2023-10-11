@@ -1,10 +1,10 @@
 ---
-
+import "../css/global.css"
 ---
 <div class="theme">
 <div class="a">
     <div class="b">
-        <img src="https://images.pexels.com/photos/13088058/pexels-photo-13088058.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+        <img src="./img/degrowth_consumerism-01.webp" alt="">
     </div>
     <div class="c">
         <p>Degrowth is an idea that critiques the global capitalist system which pursues growth at all costs, causing human exploitation and environmental destruction. The degrowth movement of activists and researchers advocates for societies that prioritize social and ecological well-being instead of corporate profits, over-production and excess consumption.</p>
@@ -13,29 +13,27 @@
 
 <div class="breaker"></div>
 
-</div>
-
 
 <div class="d">
     <div class="e">
         <p>Degrowth is an idea that critiques the global capitalist system which pursues growth at all costs, causing human exploitation and environmental destruction. The degrowth movement of activists and researchers advocates for societies that prioritize social and ecological well-being instead of corporate profits, over-production and excess consumption.</p>
     </div>
     <div class="f">
-        <img src="https://images.pexels.com/photos/13088058/pexels-photo-13088058.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+        <img src="/img/degrowth_consumerism-02.webp" alt="">
     </div>
+</div>
+
 </div>
 
 
 <style>
     .theme{
-        /* background-color: aqua; */
 margin: auto;
     }
 
     .breaker{
         width: 100%;
         height: 50px;
-        /* background-color: antiquewhite; */
     }
 
     .a{
@@ -83,7 +81,7 @@ margin: auto;
     }
 
     .c p{
-        max-width: 52ch;
+        max-width: 46ch;
         font-size: 1.8vw;
         padding: 0 0 0 0;
         /* align-items: center; */
@@ -97,11 +95,10 @@ margin: auto;
         position: relative;
         
         display: grid;
-
         grid-template-columns: minmax(300px, 55%) minmax(300px, 45%);
-        /* grid-template-rows:minmax(500px); */
 
         align-items: center;
+
 
     }
 
@@ -123,7 +120,7 @@ margin: auto;
     }
 
     .e p{
-        max-width: 52ch;
+        max-width: 46ch;
         font-size: 1.8vw;
         padding: 0 0 0 0;
         /* align-items: center; */
@@ -142,6 +139,148 @@ margin: auto;
     .f img{
         width: 100%;
         height: 100%;
+    }
+
+
+    @media (min-width: 1920px) {
+
+        .a::after {
+        font-size: 35px;
+
+}
+.d::after {
+        font-size: 35px;
+
+}
+        .c p{
+        font-size: 35px;
+    }
+
+    .e p{
+        font-size: 35px;
+    }
+}
+
+
+
+
+    @media (max-width: 750px) {
+
+        .theme{
+            padding: 20px;
+
+        }
+
+
+    .breaker{
+        width: 0;
+        height: 0;
+    }
+
+    .a{
+        max-width: 1920px;
+        position: relative;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows:minmax(500px); */
+        align-items: center;
+
+    }
+
+    .a::after {
+        content: "Degrowth";
+        font-size: 30px;
+        padding: 1% 2% 1% 2%;
+        position: absolute;
+        background-color:#D9D9D9;
+        top: 30%;
+        left: 40%;
+}
+
+
+    .b{
+
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        /* height: 400px; */
+        /* background-color:tomato; */
+        
+    }
+
+    .b img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .c{
+        /* background-color: aquamarine; */
+        box-sizing: content-box;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .c p{
+        max-width: 46ch;
+        font-size: 20px;
+        padding: 0 0 0 0;
+        /* align-items: center; */
+        box-sizing: content-box;
+
+    }
+
+    .d{
+        max-width: 1920px;
+        margin: auto;
+        position: relative;
+        
+        display: grid;
+        grid-template-columns: 1fr;
+
+        align-items: center;
+
+
+    }
+
+    .d::after {
+        content: "Consumerism";
+        font-size: 30px;
+        padding: 1% 2% 1% 2%;
+        position: absolute;
+        background-color:#D9D9D9;
+        bottom: 70%;
+        left: 40%;
+}
+
+    .e{
+        box-sizing: content-box;
+        margin-left: auto;
+        margin-right:auto;
+
+    }
+
+    .e p{
+        max-width: 46ch;
+        font-size: 20px;
+        padding: 0 0 0 0;
+        box-sizing: content-box;
+
+    }
+
+   .f{
+
+    width: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    order: -1;
+
+    }
+    .f img{
+        width: 100%;
+        height: auto;
+        
+    }  
+
     }
 
 
