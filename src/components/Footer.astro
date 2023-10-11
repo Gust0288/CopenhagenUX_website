@@ -1,10 +1,11 @@
----
-
----
 <footer>
     <section>
         <div id="sponsors">
-
+            <img src="/svg/sponsSvg/sponsLogo-01.svg" alt="REAL sponsor">
+            <img src="/svg/sponsSvg/sponsLogo-02.svg" alt="REAL sponsor">
+            <img src="/svg/sponsSvg/sponsLogo-03.svg" alt="REAL sponsor">
+            <img src="/svg/sponsSvg/sponsLogo-04.svg" alt="REAL sponsor">
+            <img src="/svg/sponsSvg/sponsLogo-05.svg" alt="REAL sponsor">
         </div>
         <div id="info">
             <a href="">Privacy Policy</a>
@@ -17,7 +18,7 @@
 <style>
     footer{
         width: 100vw;
-        height: 400px;
+        height: min-content;
     }
     section{
         max-width: 1600px;
@@ -31,6 +32,10 @@
         justify-content: space-evenly;
         background-color: rgb(135, 179, 199);
         padding: 2rem;
+    }
+
+    #sponsors img {
+        max-height: 100px;
     }
     
     #info{
@@ -51,4 +56,12 @@
         text-decoration: none;
         color: rgb(23, 39, 39)
     }
+
+@font-face{
+    font-family: interReg;
+    src: url(fonts/Inter-Regular.ttf);
+}
+a{
+    font-family: interReg;
+}
 </style>
