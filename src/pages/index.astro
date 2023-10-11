@@ -1,8 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import StartPoster from "../components/StartPoster.astro";
 import Card from "../components/Card.astro";
+import Card2 from "../components/Card2.astro";
+import CardShelf from "../components/CardShelf.astro";
+import ShelfHeader from "../components/ShelfHeader.astro";
+import Theme from "../components/Theme.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+const data = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/speakers?limit=3",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
+
+const data3 = await fetch(
+  "https://epwvrtkxmwgvqetoxbby.supabase.co/rest/v1/booth-ex?limit=3",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwd3ZydGt4bXdndnFldG94YmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTY4Mzk1MDAsImV4cCI6MjAxMjQxNTUwMH0.SvD8sWq0AGXLsbXxy5jFAfhycK-EQeUbESJ4NfJghXk",
+    },
+  }
+).then((res) => res.json());
 ---
 
-<Layout>
-	
+<Layout documentTitle="Forside">
+	<StartPoster />
+  <ShelfHeader />
+    <CardShelf title="Speakers" color="color1">
+        {
+            data.map((card) => {
+              return <Card data={card} />;
+            })
+          }
+    </CardShelf>
+    <CardShelf title="Exhibitors" color="color2">
+        {
+            data3.map((card2) => {
+              return <Card data={card2} />;
+            })
+          }
+    </CardShelf>
+    <Theme />
+    <Newsletter />
 </Layout>

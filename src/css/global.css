@@ -28,7 +28,7 @@ h4, h5{
 p{
     font-family: interReg;
 }
-
+/* 
 h1{
     font-size: 80px;
 }
@@ -52,7 +52,7 @@ h5{
 p{
     font-size: 25px;
     max-width: 48ch;
-}
+} */
 
 main{
     max-width: 1600px;

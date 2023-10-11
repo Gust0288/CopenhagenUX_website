@@ -1,8 +1,16 @@
 ---
-const {hideHeader, title, color2} = Astro.props;
+const {hideHeader, title, color} = Astro.props;
 ---
 
 <section>
+    <div class={color}>
+        <h3>{title}</h3>
+        <div id="cardContainer">
+            <slot />
+        </div>
+    </div>
+</section>
+<!-- <section>
     <div id="h2Container" class={hideHeader}>
         <h2>Upcoming 2024</h2>
     </div>
@@ -12,17 +20,17 @@ const {hideHeader, title, color2} = Astro.props;
             <slot />
         </div>
     </div>
-</section>
+</section> -->
 
 <style>
-
+/* 
 #h2Container{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     background: linear-gradient(rgba(78, 135, 160, 0.0) 0%, rgba(78, 135, 160, 0.0) 33%, rgba(78, 135, 160, 0.4) 33.00001%, rgba(78, 135, 160, 0.4) 66%, rgba(78, 135, 160, 0.6) 66.00001%, rgba(78, 135, 160, 0.6) 100%)
-}
+} */
 
-h2{
+/* h2{
     grid-column: 2/3;
     text-align: center;
     font-size: 80px;
@@ -30,11 +38,11 @@ h2{
     padding: 1rem;
     margin: 0;
    color: white;
-}
+} */
 
-#cards{
+/* #cards{
     background-color: rgba(78, 135, 160, 0.6);
-}
+} */
 
 h3{
    text-align: center;
@@ -51,16 +59,20 @@ h3{
 }
 
 
-.card1, .card2, .card3{
+/* .card1, .card2, .card3{
     width: 300px;
     height: 500px;
+} */
+
+.color1{
+    background-color: rgba(78, 135, 160, 0.6);
 }
 
-#cards .color2{
+.color2{
     background-color: rgba(78, 135, 160, 0.4);
 }
 
-#h2Container .hide{
+.hide{
     display: none;
 }
 

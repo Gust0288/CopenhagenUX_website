@@ -143,25 +143,43 @@ const data4 = await fetch(
 
 @font-face {
     font-family: kollektif;
-    src: url(../css/fonts/Kollektif.ttf);
+    src: url(fonts/Kollektif.ttf);
 }
 
 @font-face{
     font-family: interReg;
-    src: url(../css/fonts/Inter-Regular.ttf);
+    src: url(fonts/Inter-Regular.ttf);
 }
 
 @font-face{
     font-family: interBold;
-    src: url(../css/fonts/Inter-Bold.ttf);
+    src: url(fonts/Inter-Bold.ttf);
 }
 
+h2, h3, h3, h4, h5, p{
+    color: rgb(23, 39, 39);
+}
+
+h1, h2, h3{
+    font-family: kollektif;
+}
+
+h4, h5{
+    font-family: interBold;
+}
+
+p{
+    font-family: interReg;
+}
+
+#titel{
+  text-align: center;
+  font-size: 300%;
+}
   main {
     display: grid;
     grid-template-columns: 1fr;
-  }
-  #titel,
-  h2,h3 {
+  }  h2,h3 {
     text-align: center;
     font-family: kollektif;
   }
@@ -169,7 +187,7 @@ const data4 = await fetch(
     background-color: rgba(78, 135, 160, 0.4);
   }
   .speakerBack {
-    background-color: #4e87a0;
+    background-color: rgba(78, 135, 160, 0.6);
   }
   #arrow {
     max-width: 25px;
@@ -236,6 +254,7 @@ const data4 = await fetch(
     margin-bottom: 50px;
     /* box-shadow: 10px 5px 5px black; */
     box-shadow: 0 0 20px #ccc;
+    background-color: #FFF;
   }
   .topDate {
     display: flex;
