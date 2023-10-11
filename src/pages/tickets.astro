@@ -12,12 +12,43 @@ import Ticket from "../components/Ticket.astro";
 
             <Ticket color="color3" ticketName="Group Ticket" birdStatus="Contact Us" ticketInfo="Please contact us for more information about group discounts!" ulDisplay="hide" />
 
-            <Ticket color="color4" ticketName="Recording of the 2023 live-stream" ulDisplay="hide" ticketPrice="2400 DKK" />
+            <Ticket color="color4" ticketName="Recording of the 2023 live-stream" ticketInfo="Get access to the stream from the previous convention!" ulDisplay="hide" ticketPrice="2400 DKK" />
         </div>
    </main>
 </Layout>
 
 <style>
+
+@font-face {
+    font-family: kollektif;
+    src: url(fonts/Kollektif.ttf);
+}
+
+@font-face{
+    font-family: interReg;
+    src: url(fonts/Inter-Regular.ttf);
+}
+
+@font-face{
+    font-family: interBold;
+    src: url(fonts/Inter-Bold.ttf);
+}
+
+h2, h3, h3, h4, h5, p{
+    color: rgb(23, 39, 39);
+}
+
+h1, h2, h3{
+    font-family: kollektif;
+}
+
+h4, h5{
+    font-family: interBold;
+}
+
+p{
+    font-family: interReg;
+}
       #testDiv{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
